@@ -122,7 +122,10 @@ namespace tic_tac_toe
                     surrenderBtn.Enabled = false;
                 }
             }
-
+            
+            CalculateWinner();
+            if(gameWon) { RegenerateButtons(); }
+            
             if (board[index] == 'X')
             {
                 button.BackColor = ColorTranslator.FromHtml("#B2675E");
